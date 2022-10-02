@@ -12,28 +12,22 @@ function App() {
       <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
         <div className="logo" />
         <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          items={new Array(3).fill(null).map((_, index) => ({
-            key: String(index + 1),
-            label: `nav ${index + 1}`,
-          }))}
-        />
+          theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+            <Menu.Item key="1">Home</Menu.Item>
+            <Menu.Item key="2">Expences</Menu.Item>
+            <Menu.Item key="3">Catch Up</Menu.Item>
+        </Menu>
       </Header>
-      <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
+      <Content className="site-layout" style={{ padding: '50px', marginTop: 64 }}>
         <Routes>
 
           <Route path="/register" element={<SignUp />} />
         </Routes>
 
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+      <Footer style={{ textAlign: 'center' }}>
+        Expanse Tracker ©2022 Created by Tuna Güralp with Love
+      </Footer>
     </Layout>
   );
 }
